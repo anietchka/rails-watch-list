@@ -1,11 +1,18 @@
 <div class="container">
-  <h1>All the lists</h1>
-  <ul>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=625&q=80);">
+    <div class="container">
+      <h1>Find all your movies!</h1>
+      <p>A quick way to order your favorite movies.</p>
+    </div>
+  </div>
+
+  <div class="cards mt-4">
     <% @lists.each do |list| %>
-    <li>
+    <div class="card-category"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
       <%= link_to list.name, list_path(list) %>
-    </li>
+    </div>
     <% end %>
-  </ul>
-  <%= link_to "Add a new list", new_list_path %>
+  </div>
+
+  <%= link_to "Add a new list", new_list_path, class:"btn btn-primary my-4" %>
 </div>
