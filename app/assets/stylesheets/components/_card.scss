@@ -7,7 +7,10 @@
     color : white;
   }
 }
-
+.card-movie{
+  display: flex;
+  height: 230px;
+}
 .card-category {
   background-size: cover;
   background-position: center;
@@ -40,7 +43,7 @@
   transform: rotate(45deg);
   font-weight: lighter;
   text-decoration: none;
-  transition: all 2s ease;
+  transition: all 0.5s ease;
   &:hover {
     transform: rotate(90deg);
     color: white;
